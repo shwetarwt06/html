@@ -306,9 +306,6 @@ z-index: 5;
     cursor: pointer;
 }
 .clkbtn {
-   
-    /* padding: 14px; */
-
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -318,23 +315,7 @@ z-index: 5;
     transform: translateY(-2px);
 }
 
-/* Contact CSS
-#contacts{
-    margin-top: 30px;
-    width: 50px;
-    height: 80px;
-   margin-left: 280px;
-}
-#contact{
-    text-align:center;
-    margin-top: 40px;
-}
-.input{
-    height: 40px;
-    width: 200px;
-    margin: 15px;
-} */
- /*experienc section */
+
  .fswd{
     color:#e0e0e0 ;
     font-size:1.2rem ;
@@ -362,9 +343,17 @@ z-index: 5;
         padding: 20px;
     }
     
+    .sidebar{
+        position: static;
+        height: auto;
+    }
 }
 @media screen and (max-width:750px) {
    
+
+    .project-container{
+        grid-template-columns: 1fr;
+    }
 
     #navigation nav {
         /* Adjust nav for smaller screens */
@@ -435,8 +424,8 @@ z-index: 5;
                     <a href="#skills">Skills</a> 
                     <a href="#education">Education</a>
                     <a href="#certifications">Certifications</a>
-                    <a href="experience">Experience</a>
-                    <a href="signup-box">Contact me</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact-form">Contact me</a>
                 </nav>
             </div>
 
@@ -573,19 +562,6 @@ z-index: 5;
                 </div>
             </div>
 
-         <!-- <h2 id="contact">Contact Form </h2>
-            <form id="contacts">
-
-            <input type="text" name="name" placeholder="Enter Your Name" class="input"><br>
-
-            <input type="email" name="e-mail" placeholder="Enter Your E-mail" class="input"><br>
-    
-            <input type="tel" name="tele" placeholder="Enter Your Phone no." class="input"><br>
-  
-   
-            <button id="contact-button">Submit</button>
-         </form> -->
-
          
          <div id="experience">
             <h2 id="experience-heading">Experience</h2>
@@ -613,7 +589,7 @@ z-index: 5;
         
                         <!-- signup form -->
             <h1 id="contact-heading">Contact me </h1>
-            <div class="signup-box">
+            <div class="signup-box" id="contact-form">
                 
                 <input type="text" 
                        class="element" 
@@ -629,14 +605,9 @@ z-index: 5;
                        placeholder="Comments">
                  
                 <button class="clkbtn">Submit</button>
-                <div class="popup" id="popup">
+           </div>     
 
-    <div class="popup-content">
-        <!-- <span class="checkmark">✓</span>
-        <h2>Submitted!</h2> -->
-        <p>Your form has been submitted successfully.</p>
-
-        <button id="closePopup">OK</button>
+  
     </div>
 </div>
             </div>
@@ -653,23 +624,4 @@ z-index: 5;
 
 
 </body>
-<script>
-const submitBtn = document.querySelector(".clkbtn");
-const popup = document.getElementById("popup");
-const closePopup = document.getElementById("closePopup");
-
-submitBtn.addEventListener("click", function () {
-
-    // Show popup
-    popup.style.display = "flex";
-
-});
-
-closePopup.addEventListener("click", function () {
-
-    // Close popup
-    popup.style.display = "none";
-
-});
-</script>
 </html>
